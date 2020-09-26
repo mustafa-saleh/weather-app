@@ -1,9 +1,15 @@
 .date-time {
-    display: inline-flex;
-    font-size: 18px;
-    line-height: 22px;
+  display: inline-flex;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .date-time div {
-    margin-right: 10px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .date-time {
+    font-size: 14px;
+  }
 }
