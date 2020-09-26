@@ -2,10 +2,10 @@ import React from "react";
 import Night from "../../../assets/icons/Night.svg";
 import "./WeatherInfo.css";
 
-const OtherInfo = ({humidity, wind}) => {
+const OtherInfo = ({visibility, humidity, wind}) => {
   return (
     <div className="other-info">
-      <div>Precipitation: 1%</div>
+      <div>Vision: {visibility/1000} KM</div>
       <div>Wind: {Math.round(wind.speed)} KMPH</div>
       <div>Humidity: {humidity}%</div>
     </div>
@@ -35,7 +35,7 @@ const WeatherInfo = ({currentWeather}) => {
   return (
     <div className="info">
       <MainInfo main={currentWeather.main} weather={currentWeather.weather} />
-      <OtherInfo humidity={currentWeather.main.humidity} wind={currentWeather.wind} />
+      <OtherInfo visibility={currentWeather.visibility} humidity={currentWeather.main.humidity} wind={currentWeather.wind} />
     </div>
   );
 };

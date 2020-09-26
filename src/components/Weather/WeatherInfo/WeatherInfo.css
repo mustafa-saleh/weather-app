@@ -75,6 +75,18 @@
 
 @media only screen and (max-width: 480px) {
   .main-info {
-    margin-right: 40px;
+    margin-right: 15px;
+  }
+
+  .main-info img {
+    margin-right: 8px;
+  }
+  
+  .temperature {
+    margin-right: 10px;
+  }
+  
+  .main-info p {
+    margin-right: 8px;
   }
 }
