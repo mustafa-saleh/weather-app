@@ -1,0 +1,62 @@
+.future-weather {
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.future-card {
+  width: 68px;
+  padding: 7px 0 13px 0;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.future-card img {
+  height: 38px;
+  width: 100%;
+  padding: 2px 0;
+}
+
+.future-card div {
+  line-height: 1.2em;
+  font-size: 14px;
+  padding: 2px 0;
+}
+
+.nv-weather-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.nv-weather-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nv-weather-tabs .nav-link,
+.nv-weather-tabs .nav-link:hover {
+  margin-right: 4px;
+  color: inherit;
+  padding: 0;
+  border-top: 3px solid #f7f7f7;
+  background-color: #f7f7f7;
+}
+
+.nv .nav-link:active {
+  outline: none;
+}
+
+.nav-link.active,
+.nav-link.active:hover {
+  border-color: red;
+  background-color: white;
+}
+
+.chart {
+  margin-top: 30px;
+}

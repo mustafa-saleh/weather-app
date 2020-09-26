@@ -1,0 +1,35 @@
+.form-card {
+    max-width: 748px;
+    display: flex;
+    border: 1px solid lightgrey;
+    padding: 0 3px;
+    box-sizing: border-box;
+    height: 44px;
+    border-radius: 6px;
+    margin-top: 50px;
+}
+
+.form-card:hover {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 4px 1px rgba(0,0,0,.18);
+}
+
+.form-card input {
+    flex-grow: 1;
+    border-style: none;
+    border-radius: 0%;
+}
+
+.form-card input:focus {
+    box-shadow: none;
+}
+
+.form-card button {
+    background: white;
+    border: none;
+}
+
+.form-card button:hover {
+    background: white;
+    border: none;
+    border-radius: 0;
+}

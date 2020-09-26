@@ -1,0 +1,9 @@
+.date-time {
+    display: inline-flex;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.date-time div {
+    margin-right: 10px;
+}

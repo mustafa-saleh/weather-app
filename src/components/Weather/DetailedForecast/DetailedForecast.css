@@ -1,0 +1,13 @@
+.detailed {
+  color: #767676;
+  line-height: 16px;
+  font-size: 11px;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  padding-bottom: 0;
+}
+
+.detailed a,
+.detailed a:hover {
+  color: inherit;
+}
