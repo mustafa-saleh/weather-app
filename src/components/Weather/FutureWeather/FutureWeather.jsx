@@ -4,7 +4,7 @@ import "./FutureWeather.css";
 import FutureWeatherUI from "./FutureWeatherUI";
 import WeatherChart from "./WeatherChart";
 
-const FutureWeather = () => {
+const FutureWeather = ({list}) => {
   const temp = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   const Weathers = temp.map((val) => (

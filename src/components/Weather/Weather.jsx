@@ -11,8 +11,12 @@ const Weather = ({ data }) => {
     <div className="card">
       <Location city={data.city} />
       <WeatherInfo currentWeather={data.list[0]} />
-      <WeatherDateTime />
-      <FutureWeather />
+      <WeatherDateTime
+        description={data.list[0].weather[0].description}
+        dt={data.list[0].dt}
+        timezone={data.city.timezone}
+      />
+      <FutureWeather list={data.list}/>
       <DetailedForecast />
     </div>
   );

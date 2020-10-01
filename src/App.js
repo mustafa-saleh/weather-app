@@ -1,49 +1,79 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import SearchBar from "./components/SearchBar";
 import Weather from "./components/Weather";
 import AppTitle from "./components/AppTitle";
+import HelperText from "./components/HelperText";
 import { Container } from "react-bootstrap";
-import { API_URL, API_KEY } from "./config";
+import { fetchByCoords, fetchByCity } from "./utils/fetch";
+import { isEmpty } from "./utils/basic";
+import "./App.css";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState({});
-  const [weatherInfo, setWeatherInfo] = useState({});
-  const query = "?" + "q=khartoum" + "&appid=" + API_KEY + "&units=metric";
-  const url = API_URL + query;
-
-  async function fetchData() {
-    setLoading(true);
-    const response = await fetch(url);
-    response
-      .json()
-      .then((result) => {
-        if (response.ok) setWeatherInfo(result);
-        else setError(result);
-        setLoading(false);
-      })
-      .catch((err) => console.log("ERROR: ", err));
-  }
+  const [weather, setWeather] = useState({});
 
   useEffect(() => {
-    fetchData();
-    console.log("Use Effect fired!");
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(async function (position) {
+        const coords = {
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        };
+        setLoading(true);
+        fetchByCoords(coords).then((result) => {
+          setWeather({ ...result });
+          setLoading(false);
+        });
+      });
+    }
+    console.log("Use Effect 1 fired!");
   }, []);
 
+  const fetchCityWeather = (searchText) => {
+    console.log("city Searching... ", searchText);
+    setLoading(true);
+    fetchByCity(searchText).then((result) => {
+      result.ok ? setWeather({ ...result }) : setError({ ...result.error });
+      setLoading(false);
+    });
+  };
+
+  const fetchCoordsWeather = (coords) => {
+    console.log("coords Searching... ", coords);
+    setLoading(true);
+    fetchByCoords(coords).then((result) => {
+      setWeather({ ...result });
+      setLoading(false);
+    });
+  };
+
+  const searchProps = {
+    fetchByCity: fetchCityWeather,
+    fetchByCoords: fetchCoordsWeather,
+  };
   return (
     <Container>
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        <div>
-          <AppTitle />
-          <SearchBar />
-          <Weather data={weatherInfo} />
-        </div>
-      )}
+      <div>
+        <AppTitle />
+        <SearchBar {...searchProps} />
+        {loading ? (
+          "Loading..."
+        ) : isEmpty(error) === false ? (
+          <small style={{ color: "red" }}>
+            {error.message}, try using map instead.
+          </small>
+        ) : isEmpty(weather) ? (
+          <HelperText />
+        ) : (
+          <Weather data={weather.threeFive} />
+        )}
+      </div>
     </Container>
   );
 }
 
 export default App;
+{
+  /* JSON.stringify(weather) */
+}

@@ -1,12 +1,13 @@
 import React from "react";
 import "./WeatherDateTime.css";
+import { getWeatherDate } from "../../../utils/datetime";
 
-const WeatherDateTime = () => {
+const WeatherDateTime = ({ description, dt, timezone }) => {
   return (
     <div className="date-time">
-    <div>Sunny</div>
-    <div>Sun 20, 1:00 PM</div>
-  </div>
+      <div>{description}</div>
+      <div>{getWeatherDate(dt, timezone)}</div>
+    </div>
   );
 };
 

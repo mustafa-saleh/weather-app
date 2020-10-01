@@ -1,36 +1,64 @@
-import React from "react";
-import { IconContext } from "react-icons";
-import { BsSearch, BsX } from "react-icons/bs";
+import React, { useState } from "react";
+import FaIcon from "../FontAwesome";
+import MapModal from "../Modal";
+import {
+  faMapMarkedAlt,
+  faSearch,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const WeatherForm = ({ searchText, setSearchText, fetchWeather }) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (searchText.trim().length > 0) {
+      fetchWeather(searchText.trim());
+    }
+  };
+
   return (
-    <form>
-      <div className="form-card">
-        <input placeholder="Search City" className="form-control" />
-        <button
-          className="btn btn-light"
-          data-toggle="tooltip"
-          data-placement="bottom"
-          title="Clear"
-        >
-          <IconContext.Provider value={{ size: "1.5em", color: "grey" }}>
-            <BsX />
-          </IconContext.Provider>
-        </button>
-        <button
-          type="submit"
-          className="btn btn-light"
-          data-toggle="tooltip"
-          data-placement="bottom"
-          title="Search"
-        >
-          <IconContext.Provider value={{ size: "1.3em", color: "#1287A5" }}>
-            <BsSearch />
-          </IconContext.Provider>
-        </button>
-      </div>
+    <form onSubmit={(e) => handleSubmit(e)}>
+      <input
+        placeholder="search city"
+        value={searchText}
+        onChange={(e) => setSearchText(e.target.value)}
+      />
+      {searchText.length ? (
+        <FaIcon icon={faTimes} onClick={() => setSearchText("")} />
+      ) : null}
+      <FaIcon
+        icon={faSearch}
+        color="#1287A5"
+        onClick={(e) => handleSubmit(e)}
+      />
     </form>
+  );
+};
+
+const GoogleMap = ({ fetchWeather }) => {
+  const [show, setShow] = useState(false);
+
+  const openMap = () => setShow(true);
+  const closeMap = () => setShow(false);
+
+  return (
+    <>
+      <FaIcon icon={faMapMarkedAlt} size="xs" />
+      <small onClick={openMap}>use google maps</small>
+      <MapModal show={show} close={closeMap} fetchWeather={fetchWeather} />
+    </>
+  );
+};
+
+const SearchBar = ({ fetchByCity, fetchByCoords }) => {
+  const [searchText, setSearchText] = useState("");
+  const searchProps = { searchText, setSearchText, fetchWeather: fetchByCity };
+
+  return (
+    <div id="search-bar">
+      <WeatherForm {...searchProps} />
+      <GoogleMap fetchWeather={fetchByCoords} />
+    </div>
   );
 };
 

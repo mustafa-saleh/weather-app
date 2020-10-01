@@ -5,7 +5,7 @@ import "./WeatherInfo.css";
 const OtherInfo = ({visibility, humidity, wind}) => {
   return (
     <div className="other-info">
-      <div>Vision: {visibility/1000} KM</div>
+      <div>Vision: {Math.round(visibility/1000)} KM</div>
       <div>Wind: {Math.round(wind.speed)} KMPH</div>
       <div>Humidity: {humidity}%</div>
     </div>

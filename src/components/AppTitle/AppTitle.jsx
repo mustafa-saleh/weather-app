@@ -1,13 +1,8 @@
-import React from 'react';
+import React from "react";
+import './AppTitle.css';
 
-const Weather = () => {
-  return ( 
-    <div>
-      <h1>
-        Weather App
-      </h1>
-    </div>
-   );
-}
- 
-export default Weather;
+const AppTitle = () => {
+  return <h1 id="app-title">OpenWeather App</h1>;
+};
+
+export default AppTitle;
