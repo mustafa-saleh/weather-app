@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/weather-app/static/css/main.c995f8f0.chunk.css",
-    "main.js": "/weather-app/static/js/main.963ec907.chunk.js",
-    "main.js.map": "/weather-app/static/js/main.963ec907.chunk.js.map",
+    "main.css": "/weather-app/static/css/main.c2c76ea3.chunk.css",
+    "main.js": "/weather-app/static/js/main.5f47cabc.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.5f47cabc.chunk.js.map",
     "runtime-main.js": "/weather-app/static/js/runtime-main.32279052.js",
     "runtime-main.js.map": "/weather-app/static/js/runtime-main.32279052.js.map",
     "static/css/2.e68e8031.chunk.css": "/weather-app/static/css/2.e68e8031.chunk.css",
-    "static/js/2.e0a439be.chunk.js": "/weather-app/static/js/2.e0a439be.chunk.js",
-    "static/js/2.e0a439be.chunk.js.map": "/weather-app/static/js/2.e0a439be.chunk.js.map",
+    "static/js/2.bcd6d947.chunk.js": "/weather-app/static/js/2.bcd6d947.chunk.js",
+    "static/js/2.bcd6d947.chunk.js.map": "/weather-app/static/js/2.bcd6d947.chunk.js.map",
     "index.html": "/weather-app/index.html",
-    "precache-manifest.220cd367a290c1d4a9c92b83fa8cbb08.js": "/weather-app/precache-manifest.220cd367a290c1d4a9c92b83fa8cbb08.js",
+    "precache-manifest.ea9f56ddf6ae60b2ae6059880e6f07db.js": "/weather-app/precache-manifest.ea9f56ddf6ae60b2ae6059880e6f07db.js",
     "service-worker.js": "/weather-app/service-worker.js",
     "static/css/2.e68e8031.chunk.css.map": "/weather-app/static/css/2.e68e8031.chunk.css.map",
-    "static/css/main.c995f8f0.chunk.css.map": "/weather-app/static/css/main.c995f8f0.chunk.css.map",
-    "static/js/2.e0a439be.chunk.js.LICENSE.txt": "/weather-app/static/js/2.e0a439be.chunk.js.LICENSE.txt",
+    "static/css/main.c2c76ea3.chunk.css.map": "/weather-app/static/css/main.c2c76ea3.chunk.css.map",
+    "static/js/2.bcd6d947.chunk.js.LICENSE.txt": "/weather-app/static/js/2.bcd6d947.chunk.js.LICENSE.txt",
     "static/media/Cloudy.svg": "/weather-app/static/media/Cloudy.3797634d.svg",
     "static/media/Night.svg": "/weather-app/static/media/Night.31ba1d2d.svg",
     "static/media/slick-theme.css": "/weather-app/static/media/slick.f97e3bbf.svg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.32279052.js",
     "static/css/2.e68e8031.chunk.css",
-    "static/js/2.e0a439be.chunk.js",
-    "static/css/main.c995f8f0.chunk.css",
-    "static/js/main.963ec907.chunk.js"
+    "static/js/2.bcd6d947.chunk.js",
+    "static/css/main.c2c76ea3.chunk.css",
+    "static/js/main.5f47cabc.chunk.js"
   ]
 }
