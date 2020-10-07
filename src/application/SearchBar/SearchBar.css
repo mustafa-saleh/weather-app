@@ -16,7 +16,7 @@
   font: 18px / normal "Roboto", Helvetica, Sans-Serif;
   border: none;
   flex-grow: 1;
-  padding: 12px;
+  padding: 12px 0 12px 12px;
 }
 
 #search-bar input:focus {
