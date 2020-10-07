@@ -3,3 +3,9 @@
     color: #1287A5;
     margin-top: 50px;
 }
+
+@media only screen and (max-width: 480px) {
+    #app-title {
+        font-size: 28px;
+    }
+}

@@ -1,8 +1,8 @@
 import React from "react";
-import './AppTitle.css';
+import "./AppTitle.css";
 
-const AppTitle = () => {
-  return <h1 id="app-title">OpenWeather App</h1>;
+const AppTitle = (props) => {
+  return <h1 id="app-title">{props.children}</h1>;
 };
 
 export default AppTitle;

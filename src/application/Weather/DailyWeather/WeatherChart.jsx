@@ -46,29 +46,17 @@ Chart.pluginService.register({
   },
 });
 
-const WeatherChart = (props) => {
+const WeatherChart = ({ labels, data, tickMax, tickStep }) => {
   const chartRef = useRef();
 
   useEffect(() => {
-    const areaChartRef = chartRef.current.getContext("2d");
-    areaChartRef.canvas.height = "120";
-
-    new Chart(areaChartRef, {
+    new Chart(chartRef.current, {
       type: "line",
       data: {
-        labels: [
-          "1 AM",
-          "4 AM",
-          "7 AM",
-          "10 AM",
-          "1 PM",
-          "4 PM",
-          "7 PM",
-          "10 PM",
-        ],
+        labels: labels,
         datasets: [
           {
-            data: [31, 30, 37, 30, 30, 33, 37, 35],
+            data: data,
             backgroundColor: "#fef9cc",
             borderColor: "#fbe000",
             borderWidth: 1,
@@ -76,8 +64,9 @@ const WeatherChart = (props) => {
         ],
       },
       options: {
+        bezierCurve: false,
         showAllTooltips: true,
-        maintainAspectRatio: false,
+        // maintainAspectRatio: false,
         responsive: true,
         layout: {
           padding: {
@@ -90,7 +79,8 @@ const WeatherChart = (props) => {
         tooltips: {
           backgroundColor: "white",
           caretSize: 0,
-          bodyFontSize: 14,
+          bodyFontSize: 13,
+          bodyFontFamily: "Roboto, Helvetica, Sans-Serif",
           bodyFontColor: "#666",
           displayColors: false,
           yAlign: "bottom",
@@ -99,7 +89,10 @@ const WeatherChart = (props) => {
           callbacks: {
             title: function (tooltipItem, data) {
               return ""; //data['labels'][tooltipItem[0]['index']];
-            }
+            },
+            label: function (tooltipItem, data) {
+              return `${data["datasets"][0]["data"][tooltipItem["index"]]}°`;
+            },
           },
         },
         legend: {
@@ -113,6 +106,8 @@ const WeatherChart = (props) => {
               },
               ticks: {
                 fontColor: "#666",
+                fontFamily: "Roboto, Helvetica, Sans-Serif",
+                fontSize: 13,
               },
             },
           ],
@@ -121,8 +116,8 @@ const WeatherChart = (props) => {
               display: false,
               ticks: {
                 beginAtZero: true,
-                suggestedMax: 50,
-                stepSize: 1,
+                suggestedMax: tickMax,
+                stepSize: tickStep,
               },
             },
           ],
@@ -131,11 +126,7 @@ const WeatherChart = (props) => {
     });
   });
 
-  return (
-    <div>
-      <canvas id="areaChart" ref={chartRef} />
-    </div>
-  );
+  return <canvas ref={chartRef} height="60" />;
 };
 
 export default WeatherChart;

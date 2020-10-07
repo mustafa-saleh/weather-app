@@ -2,6 +2,7 @@
   display: inline-flex;
   font-size: 18px;
   line-height: 22px;
+  margin-bottom: 24px;
 }
 
 .date-time div {

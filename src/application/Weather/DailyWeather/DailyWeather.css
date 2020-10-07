@@ -1,9 +1,7 @@
-.future-weather {
-  margin-top: 10px;
-  padding-top: 20px;
+.daily-weather {
 }
 
-.future-card {
+.daily-card {
   width: 68px;
   padding: 7px 0 13px 0;
   text-align: center;
@@ -12,13 +10,13 @@
   background-color: inherit;
 }
 
-.future-card img {
+.daily-card img {
   height: 38px;
   width: 100%;
   padding: 2px 0;
 }
 
-.future-card div {
+.daily-card div {
   line-height: 1.2em;
   font-size: 14px;
   padding: 2px 0;
@@ -58,5 +56,5 @@
 }
 
 .chart {
-  margin-top: 30px;
+  margin-top: 20px;
 }
