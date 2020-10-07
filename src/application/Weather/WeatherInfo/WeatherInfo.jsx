@@ -2,7 +2,9 @@ import React, { useContext } from "react";
 import { UnitContext, units } from "../../../components/UnitContext";
 import { getWeatherIcon } from "../../../utils/icons";
 import {
-  kilosToMiles, meterToMiles, toFehrehite
+  kilosToMiles,
+  meterToMiles,
+  toFehrehite,
 } from "../../../utils/unitConverter";
 import "./WeatherInfo.css";
 

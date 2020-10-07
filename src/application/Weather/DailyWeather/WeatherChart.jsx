@@ -48,7 +48,7 @@ Chart.pluginService.register({
 
 const WeatherChart = ({ labels, data, tickMax, tickStep }) => {
   const chartRef = useRef();
-
+ 
   useEffect(() => {
     new Chart(chartRef.current, {
       type: "line",
@@ -66,7 +66,7 @@ const WeatherChart = ({ labels, data, tickMax, tickStep }) => {
       options: {
         bezierCurve: false,
         showAllTooltips: true,
-        // maintainAspectRatio: false,
+        maintainAspectRatio: false,
         responsive: true,
         layout: {
           padding: {
@@ -79,7 +79,7 @@ const WeatherChart = ({ labels, data, tickMax, tickStep }) => {
         tooltips: {
           backgroundColor: "white",
           caretSize: 0,
-          bodyFontSize: 13,
+          bodyFontSize: 12,
           bodyFontFamily: "Roboto, Helvetica, Sans-Serif",
           bodyFontColor: "#666",
           displayColors: false,
@@ -107,7 +107,7 @@ const WeatherChart = ({ labels, data, tickMax, tickStep }) => {
               ticks: {
                 fontColor: "#666",
                 fontFamily: "Roboto, Helvetica, Sans-Serif",
-                fontSize: 13,
+                fontSize: 11,
               },
             },
           ],
@@ -126,7 +126,7 @@ const WeatherChart = ({ labels, data, tickMax, tickStep }) => {
     });
   });
 
-  return <canvas ref={chartRef} height="60" />;
+  return <canvas ref={chartRef} />;
 };
 
 export default WeatherChart;

@@ -33,7 +33,7 @@
 
 #temperature > :nth-child(2) > div:nth-child(2) {
   position: absolute;
-  top: 24px;
+  top: 26px;
   left: 6px;
   width: 12px;
   border-bottom: 1px solid #ccc;
@@ -94,5 +94,10 @@
   #extra-info {
     margin-right: 0px;
     font: 11px / normal "Roboto", Helvetica, Sans-Serif;
+  }
+
+  #temperature > :nth-child(2) > div:nth-child(2) {
+    top: 20px;
+    left: 4px;
   }
 }

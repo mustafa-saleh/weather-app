@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
+import Weather from "../application/Weather";
 import AppTitle from "../components/AppTitle";
+import Error from "../components/Error";
 import HelperText from "../components/HelperText";
 import Loading from "../components/Loading";
-import Error from "../components/Error";
-import Weather from "../application/Weather";
 import { isEmpty } from "../utils/basic";
 import { fetchByCity, fetchByCoords } from "../utils/fetch";
 import "./App.css";
@@ -25,11 +25,9 @@ function App() {
         fetchWeather(coords);
       });
     }
-    console.log("Use Effect fired!");
   }, []);
 
   const fetchWeather = (coords, city = null) => {
-    console.log("fetching: ", coords, city);
     setLoading(true);
     setError({});
     city !== null

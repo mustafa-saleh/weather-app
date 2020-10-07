@@ -14,7 +14,9 @@ const TabTitle = ({ day, timezone }) => {
   return (
     <div className="daily-card">
       <div>{getWeatherDate(day.dt, timezone)}</div>
-      <img src={getTabIcon(day)} alt="weather Image" />
+      <div>
+        <img src={getTabIcon(day)} alt="weather" />
+      </div>
       <div>{getTemperature(day.temp.max)}°</div>
       <div>{getTemperature(day.temp.min)}°</div>
     </div>

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Tab } from "react-bootstrap";
 import WeatherTabs from "../../../components/BsTabs";
+import { UnitContext, units } from "../../../components/UnitContext";
 import { getEpochDateTime, getTimeLabel } from "../../../utils/datetime";
+import { toFehrehite } from "../../../utils/unitConverter";
 import "./DailyWeather.css";
 import WeatherChart from "./WeatherChart";
 import TabTitle from "./WeatherTab";
-import { UnitContext, units } from "../../../components/UnitContext";
-import { toFehrehite } from "../../../utils/unitConverter";
 
 const DailyWeather = ({ threeFive, oneCall }) => {
   const unit = useContext(UnitContext);

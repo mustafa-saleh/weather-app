@@ -4,7 +4,14 @@ import "./DetailedForecast.css";
 const DetailedForecast = () => {
   return (
     <div className="detailed">
-      <a href="https://openweathermap.org/" target="_blank">Detailed forecast</a> · Data from OpenWeather
+      <a
+        href="https://openweathermap.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Detailed forecast
+      </a>{" "}
+      · Data from OpenWeather
     </div>
   );
 };

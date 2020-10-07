@@ -6,7 +6,7 @@ const BsTabs = ({ activeTab, children }) => {
   return (
     <Tabs
       defaultActiveKey={activeTab}
-      transition={false}
+      mountOnEnter={true}
       bsPrefix="nv"
       variant="weather-tabs"
     >
