@@ -1,39 +1,51 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "77fe70b9b2bfc25d4b6f5171139c89e5",
+    "revision": "13430fef8525824940cffe846b9e460c",
     "url": "/weather-app/index.html"
   },
   {
-    "revision": "7dac0c04af274af27d29",
+    "revision": "cafa09a6ac2d15c9d075",
     "url": "/weather-app/static/css/2.e68e8031.chunk.css"
   },
   {
-    "revision": "784114031696722adcc9",
-    "url": "/weather-app/static/css/main.c2c76ea3.chunk.css"
+    "revision": "fa59504a8c2a9661cf78",
+    "url": "/weather-app/static/css/main.d08314eb.chunk.css"
   },
   {
-    "revision": "7dac0c04af274af27d29",
-    "url": "/weather-app/static/js/2.bcd6d947.chunk.js"
+    "revision": "cafa09a6ac2d15c9d075",
+    "url": "/weather-app/static/js/2.d709bae1.chunk.js"
   },
   {
     "revision": "19e0b1e2a3bb37673c735334fed592f6",
-    "url": "/weather-app/static/js/2.bcd6d947.chunk.js.LICENSE.txt"
+    "url": "/weather-app/static/js/2.d709bae1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "784114031696722adcc9",
-    "url": "/weather-app/static/js/main.5f47cabc.chunk.js"
+    "revision": "fa59504a8c2a9661cf78",
+    "url": "/weather-app/static/js/main.efa9a036.chunk.js"
   },
   {
     "revision": "37c738ef312e86ba523e",
     "url": "/weather-app/static/js/runtime-main.32279052.js"
   },
   {
+    "revision": "aa6f8ece59f31fdc57751d5807a5ea4f",
+    "url": "/weather-app/static/media/Day.aa6f8ece.svg"
+  },
+  {
     "revision": "3797634d73a0c744b044e4092e02a54a",
-    "url": "/weather-app/static/media/Cloudy.3797634d.svg"
+    "url": "/weather-app/static/media/DayCloud.3797634d.svg"
   },
   {
     "revision": "31ba1d2d0d496c3118f4a6a30e32dda9",
     "url": "/weather-app/static/media/Night.31ba1d2d.svg"
+  },
+  {
+    "revision": "70a0d01f025043e4b65258adee80819d",
+    "url": "/weather-app/static/media/NightCloud.70a0d01f.svg"
+  },
+  {
+    "revision": "30ac9d7cc94b569fa8b8491121e0a8ed",
+    "url": "/weather-app/static/media/Raining.30ac9d7c.svg"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
