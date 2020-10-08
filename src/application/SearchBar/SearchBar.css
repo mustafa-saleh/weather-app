@@ -38,3 +38,9 @@ form span {
 #search-bar small:hover {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 480px) {
+  form span {
+    padding: 10px 10px 10px 0px;
+  }
+}
