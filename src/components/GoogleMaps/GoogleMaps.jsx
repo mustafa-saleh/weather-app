@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { isEmpty } from "../../utils/basic";
 
 export class MapContainer extends Component {
-  mapClicked = (mapProps, map, clickEvent) => {
+  clickedOrDraged = (props, element, clickEvent) => {
     const latLng = {
       lat: clickEvent.latLng.lat(),
       lng: clickEvent.latLng.lng(),
@@ -24,13 +24,14 @@ export class MapContainer extends Component {
         >
           <Map
             zoom={2}
-            onClick={this.mapClicked}
+            onClick={this.clickedOrDraged}
             google={this.props.google}
             initialCenter={{ lat: 15.5007, lng: 32.5599 }}
           >
             {isEmpty(this.props.marker) ? null : (
               <Marker
                 draggable
+                onDragend={this.clickedOrDraged}
                 position={this.props.marker}
                 icon={{
                   url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",

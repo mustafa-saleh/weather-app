@@ -28,8 +28,8 @@ const SearchBar = ({ getWeather }) => {
   const [city, setCity] = useState("");
 
   const getByCoords = (marker) => {
-    setCity("");
     getWeather(marker);
+    setCity("");
   };
 
   const getByCity = (event) => {
