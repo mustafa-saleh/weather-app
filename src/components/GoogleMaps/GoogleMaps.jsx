@@ -33,7 +33,7 @@ export class MapContainer extends Component {
                 draggable
                 position={this.props.marker}
                 icon={{
-                  url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                  url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
                 }}
               />
             )}
@@ -46,5 +46,4 @@ export class MapContainer extends Component {
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyD3s785xPg5XvFY5XOBUy6JiyOIcZOsyFQ",
-  //   v: "3.30",
 })(MapContainer);
