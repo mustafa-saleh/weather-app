@@ -2,7 +2,7 @@ function toCelcius(temperature) {
   return ((temperature - 32) * 5) / 9;
 }
 
-function toFehrehite(temperature) {
+function toFahrenheit(temperature) {
   return (temperature * 9) / 5 + 32;
 }
 
@@ -14,4 +14,4 @@ function kilosToMiles(value) {
   return value / 1.609;
 }
 
-export { toCelcius, toFehrehite, meterToMiles, kilosToMiles };
+export { toCelcius, toFahrenheit, meterToMiles, kilosToMiles };

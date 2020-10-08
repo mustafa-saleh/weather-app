@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import { UnitContext, units } from "../../../components/UnitContext";
 import { getWeatherDate } from "../../../utils/datetime";
 import { getTabIcon } from "../../../utils/icons";
-import { toFehrehite } from "../../../utils/unitConverter";
+import { toFahrenheit } from "../../../utils/unitConverter";
 
 const TabTitle = ({ day, timezone }) => {
   const unit = useContext(UnitContext);
 
   const getTemperature = (temp) => {
-    return Math.round(unit === units.celcius ? temp : toFehrehite(temp));
+    return Math.round(unit === units.celcius ? temp : toFahrenheit(temp));
   };
 
   return (

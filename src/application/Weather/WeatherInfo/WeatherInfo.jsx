@@ -4,7 +4,7 @@ import { getWeatherIcon } from "../../../utils/icons";
 import {
   kilosToMiles,
   meterToMiles,
-  toFehrehite,
+  toFahrenheit,
 } from "../../../utils/unitConverter";
 import "./WeatherInfo.css";
 
@@ -15,7 +15,7 @@ const WeatherInfo = ({ weather, changeUnit }) => {
   const icon = getWeatherIcon(current);
 
   const getTemperature = (temp) => {
-    return Math.round(unit === units.celcius ? temp : toFehrehite(temp));
+    return Math.round(unit === units.celcius ? temp : toFahrenheit(temp));
   };
 
   const getUnit = (type) => {

@@ -15,18 +15,6 @@ function App() {
   const [error, setError] = useState({});
   const [weather, setWeather] = useState({});
 
-  // useEffect(() => {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(function (position) {
-  //       const coords = {
-  //         lat: position.coords.latitude,
-  //         lon: position.coords.longitude,
-  //       };
-  //       fetchWeather(coords);
-  //     });
-  //   }
-  // }, []);
-
   const fetchWeather = (coords, city = null) => {
     setLoading(true);
     setError({});

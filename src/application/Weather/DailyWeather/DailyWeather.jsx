@@ -3,7 +3,7 @@ import { Tab } from "react-bootstrap";
 import WeatherTabs from "../../../components/BsTabs";
 import { UnitContext, units } from "../../../components/UnitContext";
 import { getEpochDateTime, getTimeLabel } from "../../../utils/datetime";
-import { toFehrehite } from "../../../utils/unitConverter";
+import { toFahrenheit } from "../../../utils/unitConverter";
 import "./DailyWeather.css";
 import WeatherChart from "./WeatherChart";
 import TabTitle from "./WeatherTab";
@@ -14,7 +14,7 @@ const DailyWeather = ({ threeFive, oneCall }) => {
   let timezone = oneCall.timezone_offset;
 
   const getTemperature = (temp) => {
-    return Math.round(unit === units.celcius ? temp : toFehrehite(temp));
+    return Math.round(unit === units.celcius ? temp : toFahrenheit(temp));
   };
 
   const getStep = () => {
